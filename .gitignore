@@ -2,3 +2,6 @@
 site
 env/
 .venv/site
+
+# result files
+*.zip
