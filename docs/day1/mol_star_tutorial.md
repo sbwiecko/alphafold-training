@@ -93,14 +93,65 @@ Upload from PDB the crystal structure of human **myoglobin** (PDB ID: `1MBO`) an
 
 Myoglobin is a monomer and hemoglobin is a tetramer. Select one chain of hemoglobin and one of myoglobin and superpose them using **TM-align**. Then hide all chains of hemoglobin that were not superposed with myoglobin.
 
+### PyMOL
+
+1. Open PyMOL from the command line `pymol`
+2. Download both proteins from the PDB directly into PyMOL
+```python
+fetch 1mbo
+fetch 4hhb
+```
+3. Since 1MBO is a monomer, we can use the whole object. Hemoglobin (4HHB) is a tetramer (chains A, B, C, and D), so we need to specify just one chain—let's use Chain A. For the alignment of the structures, we use the built-in equivalent to TM-align `super 4hhb and chain A, 1mbo`
+4. Next we hide everything in hemoglobin that is not chain A using `hide everything, 4hhb and not chain A`
+5. Finally, we put some colors
+```python
+color green, 1mbo
+color cyan, 4hhb and chain A
+```
+6. Center the alignment with `zoom 1mbo or (4hhb and chain A)`
+7. Optionally, we may render the final picture using ray trace mode as follows
+```python
+bg_color white
+set ray_trace_mode, 3
+ray
+```
+
+![Superposition of the two structures](./myo_hemo_globin.png)
+
 ## Exercise 2
 
-Upload the best model for the **PIGU protein** from Exercise 1 of the ColabFold tutorial to Mol* and color it by **pLDDT**.
+Upload the best model for the **PIGU protein** from Exercise 1 of the ColabFold tutorial to Mol* and color it by **pLDDT** using `spectrum b, rainbow_rev, minimum=50, maximum=90` (ColabFold and AlphaFold store the predicted local distance difference test (pLDDT) scores directly inside the B-factor column of the resulting .pdb or .cif files). We can give the structure an alias `set_name PIGU_prediction_98843_unrelaxed_rank_001_alphafold2_ptm_model_4_seed_000, PIGU`.
 
 PIGU protein (UniProt ID: [Q9H490](https://www.uniprot.org/uniprotkb/Q9H490)) is part of the human glycosylphosphatidylinositol (GPI) transamidase complex.
 
-Download from PDB the structure of **GPIT** (PDB ID: `7W72`) and superpose the modeled PIGU protein with PIGU in the complex.
+Download from PDB the structure of **GPIT** (PDB ID: `7W72`) and superpose the modeled PIGU protein with PIGU in the complex. Note that "chain A [auth U]" means the PDB calls it Chain A, but the original authors called it Chain U, so we use `super PIGU, 7w72 and chain U`.
 
 - Analyze the **TM-score** and **RMSD** scores
+
+```text
+ MatchAlign: aligning residues (435 vs 420)...
+ MatchAlign: score 2187.965
+ ExecutiveAlign: 3409 atoms aligned.
+ ExecutiveRMS: 206 atoms rejected during cycle 1 (RMSD=1.32).
+ ExecutiveRMS: 230 atoms rejected during cycle 2 (RMSD=0.91).
+ ExecutiveRMS: 143 atoms rejected during cycle 3 (RMSD=0.72).
+ ExecutiveRMS: 87 atoms rejected during cycle 4 (RMSD=0.63).
+ ExecutiveRMS: 44 atoms rejected during cycle 5 (RMSD=0.60).
+ Executive: RMSD =    0.580 (2699 to 2699 atoms)
+```
+
 - What can you say about the structural alignment?
+
+The structural alignment reveals that the core 3D folds of the two models are almost identical. The final RMSD is extremely low (0.580 Å) over a very large number of atoms (2699). PyMOL reached this highly confident alignment by performing 5 outlier rejection cycles to exclude flexible or divergent regions (710 atoms). (Note: insert your TM-score analysis here—if the TM-score is > 0.5, it confirms they share the same global fold; if it is > 0.8, it confirms excellent global topology).
+
 - Hide all chains that were not superposed with PIGU
+
+```
+color grey, 7w72
+zoom PIGU
+bg_color white
+set ray_trace_mode, 3
+ray
+```
+
+![Superposition of the PIGU domain prediction to the crystal domain structure](.\PIGU_7W72.png)
