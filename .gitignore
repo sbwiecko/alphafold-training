@@ -5,3 +5,6 @@ env/
 
 # result files
 *.zip
+
+# structures
+*.cif
