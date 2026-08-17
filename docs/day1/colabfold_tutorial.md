@@ -28,7 +28,7 @@ In this first exercise, you will submit a single protein sequence to ColabFold a
 !!! tip
     Alternatively, you can set all the parameters and then run all cells. Go to **Runtime → Run all**. Click "Run anyway" in the pop-up window to proceed.
 
-    ![Run all cells](../assets/images/t_2.png)
+![Run all cells](../assets/images/t_2.png)
 
 !!! warning
     Google Colab typically allows only one active notebook at a time. Terminate any other Colab sessions before starting ColabFold. If you continue to have problems, or if Colab disconnects during the prediction, go to the "Runtime" menu, select "Disconnect and delete runtime," then click "Run all" to restart the process.
@@ -139,18 +139,18 @@ In this exercise, you will examine a protein complex prediction. The aim is not 
     !!! question "Questions to consider"
         But what is the native fold for Q55DI5? And what would you do if you don't know in which oligomeric state you should model the target protein?
 
-6. Go to [SWISS-MODEL Repository](https://swissmodel.expasy.org/repository) and paste `Q55DI5` in the search field.
+6. Go to [SWISS-MODEL Repository](https://swissmodel.expasy.org/repository) and paste `Q55DI5` in the search field. Q55DI5 is a unique UniProt accession code that identifies the sequence for the transcription elongation factor Eaf (N-terminal domain-containing protein) from the organism _Dictyostelium discoideum_.
 
     ![SWISS-MODEL search](../assets/images/t_10.png)
 
-7. The results of the search show: (1) the best template found in PDB100 through a sequence search, which was used to build the SWISS-MODEL model (3); SWISS-MODEL also shows good hits found in AFDB. Chain O was the template from the found complex **PDB ID: 7OKX** (4).
+7. The results of the search show: (1) the best template found in PDB100 through a sequence search, which was used to build the SWISS-MODEL model (3); SWISS-MODEL also shows good hits found in AFDB. Chain O was the template from the found complex **PDB ID: 7OKX** (4). 7OKX is a unique identifier in PDB that represents the experimentally determined 3D structure of the active transcription elongation complex Pol II-DSIF (SPT5-KOW5)-ELL2-EAF1. This complex was resolved using cryo-electron microscopy (cryo-EM).
 
     ![SWISS-MODEL results](../assets/images/t_11.png)
 
 8. Now superpose in Mol\* the found template chain with the modeled homodimer. What can you say about that?
 
 !!! warning "Spoiler alert!"
-    Based on the found model, the target protein probably exists in a complex with other proteins, and the AF2 model for the homodimer is closer to the native fold than the monomer model.
+    Based on the found model, the target protein probably exists in a complex with other proteins, and the AF2 model for the homodimer is closer to the native fold than the monomer model. We do not have the experimental structure for the exact target sequence (Dictyostelium Eaf). However, we do have the experimental structure of a highly conserved evolutionary relative (a homologous complex from mammals, including the human EAF1 protein).
 
 ---
 

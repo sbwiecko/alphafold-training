@@ -101,7 +101,7 @@ Myoglobin is a monomer and hemoglobin is a tetramer. Select one chain of hemoglo
 fetch 1mbo
 fetch 4hhb
 ```
-3. Since 1MBO is a monomer, we can use the whole object. Hemoglobin (4HHB) is a tetramer (chains A, B, C, and D), so we need to specify just one chain—let's use Chain A. For the alignment of the structures, we use the built-in equivalent to TM-align `super 4hhb and chain A, 1mbo`
+3. Since 1MBO is a monomer, we can use the whole object. Hemoglobin (4HHB) is a tetramer (chains A, B, C, and D), so we need to specify just one chain—let's use Chain A. For example, we can get the list of the structure's chains using the command `get_chains XXXX`. For the alignment of the structures, we use the built-in equivalent to TM-align `super 4hhb and chain A, 1mbo`
 4. Next we hide everything in hemoglobin that is not chain A using `hide everything, 4hhb and not chain A`, also Use the solvent selector to hide water molecules `hide everything, solvent`. Finally, remove SO4 and color O2 by element as follows:
 ```python
 color atomic, resn OXY
@@ -124,7 +124,7 @@ ray
 
 ## Exercise 2
 
-Upload the best model for the **PIGU protein** from Exercise 1 of the ColabFold tutorial as PIGU object `load data\Exercise_1\PIGU_prediction_98843_unrelaxed_rank_001_alphafold2_ptm_model_4_seed_000.pdb, PIGU` and color it by **pLDDT** using `spectrum b, rainbow_rev, minimum=50, maximum=90` (ColabFold and AlphaFold store the predicted local distance difference test (pLDDT) scores directly inside the B-factor column of the resulting .pdb or .cif files).
+Upload the best model for the **PIGU protein** from Exercise 1 of the ColabFold tutorial as PIGU object `load data\Exercise_1\PIGU_prediction_98843_unrelaxed_rank_001_alphafold2_ptm_model_4_seed_000.pdb, PIGU` and color it by **pLDDT** using `spectrum b, rainbow_rev, minimum=50, maximum=90` (ColabFold and AlphaFold store the predicted local distance difference test (pLDDT) scores directly inside the B-factor column of the resulting .pdb or .cif files). We can also color a specific structure and chain using positional arguments (Property, Palette, Selection), e.g., `spectrum b, rainbow_rev, homodimer_pred and chain B, minimum=50, maximum=90`.
 
 We could alos give the structure the PIGU alias `set_name PIGU_prediction_98843_unrelaxed_rank_001_alphafold2_ptm_model_4_seed_000, PIGU` after loading the PDB file.
 

@@ -6,5 +6,7 @@ env/
 # result files
 *.zip
 
-# structures
+# structures and a3m
 *.cif
+*.pdb
+*.a3m

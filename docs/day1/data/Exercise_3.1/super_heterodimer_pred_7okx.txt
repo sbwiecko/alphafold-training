@@ -1,0 +1,10 @@
+PyMOL>super homodimer_pred and chain B, 7okx
+ MatchAlign: aligning residues (123 vs 123)...
+ MatchAlign: score 262.054
+ ExecutiveAlign: 537 atoms aligned.
+ ExecutiveRMS: 30 atoms rejected during cycle 1 (RMSD=2.61).
+ ExecutiveRMS: 21 atoms rejected during cycle 2 (RMSD=2.20).
+ ExecutiveRMS: 13 atoms rejected during cycle 3 (RMSD=2.02).
+ ExecutiveRMS: 5 atoms rejected during cycle 4 (RMSD=1.92).
+ ExecutiveRMS: 4 atoms rejected during cycle 5 (RMSD=1.88).
+ Executive: RMSD =    1.859 (464 to 464 atoms)
