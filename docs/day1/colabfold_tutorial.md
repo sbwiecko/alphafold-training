@@ -179,7 +179,7 @@ This exercise emphasises that AF2, like AF3, does not know the stoichiometry of 
 
 6. Open Mol\* and upload the best monomeric model. Upload the Foldseek hit (PDB ID: `6SK0`) structure using the **Download Structure** window in Mol\*.
 
-    ![Mol* Download Structure](../assets/images/t_14.png){ width="60%" }
+    ![Mol* Download Structure](../assets/images/t_14.png)
 
 7. Superpose the AF2 model with the experimental structure. What do you observe?
 8. Consider whether the modelled protein might be part of a **trimer** rather than a standalone monomer. To test this hypothesis, paste 3 copies of the target sequence into the input sequence field, separated by `:`, and run the prediction. This step takes approximately 1 hour; to save time, the results are also available in the [Data](data.md) section.
