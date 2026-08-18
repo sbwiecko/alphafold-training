@@ -1,0 +1,20 @@
+PyMOL>super OCT1_pred, inward_conf
+ MatchAlign: aligning residues (554 vs 554)...
+ MatchAlign: score 1865.678
+ ExecutiveAlign: 3459 atoms aligned.
+ ExecutiveRMS: 147 atoms rejected during cycle 1 (RMSD=2.00).
+ ExecutiveRMS: 159 atoms rejected during cycle 2 (RMSD=1.53).
+ ExecutiveRMS: 126 atoms rejected during cycle 3 (RMSD=1.35).
+ ExecutiveRMS: 109 atoms rejected during cycle 4 (RMSD=1.24).
+ ExecutiveRMS: 77 atoms rejected during cycle 5 (RMSD=1.16).
+ Executive: RMSD =    1.098 (2794 to 2794 atoms)
+PyMOL>super OCT1_pred, outward_conf
+ MatchAlign: aligning residues (554 vs 554)...
+ MatchAlign: score 2058.510
+ ExecutiveAlign: 3872 atoms aligned.
+ ExecutiveRMS: 154 atoms rejected during cycle 1 (RMSD=4.39).
+ ExecutiveRMS: 125 atoms rejected during cycle 2 (RMSD=3.84).
+ ExecutiveRMS: 99 atoms rejected during cycle 3 (RMSD=3.58).
+ ExecutiveRMS: 76 atoms rejected during cycle 4 (RMSD=3.39).
+ ExecutiveRMS: 57 atoms rejected during cycle 5 (RMSD=3.26).
+ Executive: RMSD =    3.170 (3361 to 3361 atoms)

@@ -7,6 +7,6 @@ env/
 *.zip
 
 # structures and a3m
-*.cif
-*.pdb
+*.cif*
+*.pdb*
 *.a3m
