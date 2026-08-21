@@ -219,6 +219,10 @@ To sample different conformations (which is outside the initial scope of AlphaFo
 1. **Reducing MSA depth** through the `max_msa` parameter
 2. **Activating dropout layers** by checking the `use_dropout` box
 
+In the first strategy, without a massive MSA locking it in place, AlphaFold2 is forced to rely more heavily on the local physics and geometry learned during its training. Because the constraints are weaker, the model becomes highly sensitive to the random sampling of the sequences it does see, allowing it to predict alternative, functionally relevant states (like an "inward-facing" vs. "outward-facing" transporter).
+
+In the latter, checking `use_dropout` force the network to keep dropping random connections inside the Evoformer and Structure Module during the actual prediction. This injects structural noise into the algorithm. Every time the model passes data through its layers, it uses a slightly different pathway of "activated" neurons. This stochasticity disrupts the model's tendency to confidently plunge into a single dominant conformation, causing it to randomly sample nearby energy minima (alternative structural states).
+
 In both cases the result also depends on the starting point (seed), so we can increase the number of times the model is run (by setting `num_seeds` to a bigger number), thereby increasing the chance some of them are in an alternative conformation.
 
 !!! note
