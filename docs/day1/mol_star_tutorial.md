@@ -242,3 +242,19 @@ Both algorithms successfully aligned the structures, but they report the quality
   * `usalign` established a global alignment of 420 residues with a remarkably low **RMSD of 0.72 Å**. It maintained this alignment across the entire overlapping domain to calculate the true topological score.
   * `super` started by matching residues, then iteratively threw away 710 atoms (outlier rejection across 5 cycles) to artificially tighten the core fit. It settled on an even lower **RMSD of 0.580 Å**.
 * **Sequence identity:** `usalign` reveals a sequence identity of 100% (`Seq_ID= 1.000`) for the aligned region. Unlike the previous comparison in the "twilight zone," this proves that `PIGU` and `7w72 chain U` are the exact same protein. This means you are essentially comparing a highly accurate predictive model directly against its experimentally solved counterpart.
+
+### The main PyMOL native alignment commands
+
+* **`align` (The Sequence-First Method)**
+  * **How it works:** It first performs a standard sequence alignment to match residues between the two proteins, then superimposes them structurally based on that sequence match, iteratively tossing out outliers to lower the RMSD.
+  * **When to use it:** When your proteins have **high sequence identity (> 30%)**. If the sequences are too different, the initial sequence alignment fails, and the structural fit will be garbage.
+* **`super` (The Geometry-First Method)**
+  * **How it works:** It ignores the sequence almost entirely. Instead, it scans the backbones of both proteins to find matching local structural geometries (patterns of distances and angles), pairs those atoms up, and then iteratively tosses out outliers.
+  * **When to use it:** When your proteins have **low sequence identity (the "twilight zone")** but you know they share a highly similar structural fold or core.
+* **`cealign` (The Secondary Structure Method)**
+  * **How it works:** It uses the Combinatorial Extension (CE) algorithm, which completely ignores sequence and instead maps the relationships between secondary structure elements (alpha helices and beta sheets). It glues these rigid structural blocks together to find the best global topological fit.
+  * **When to use it:** When your proteins have **virtually zero sequence identity**, have undergone significant conformational changes (like large hinge movements), or when you want a highly robust global alignment without aggressive outlier rejection.
+
+#### Summary Rule of Thumb
+
+Use **`align`** for mutants/homologs, **`super`** for distant relatives, and **`cealign`** (or the newly installed **`usalign`**) for purely topological comparisons.
