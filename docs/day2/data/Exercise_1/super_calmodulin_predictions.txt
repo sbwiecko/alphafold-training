@@ -1,0 +1,9 @@
+PyMOL>super calmodulin_prediction, calmodulin_ca_prediction
+ MatchAlign: aligning residues (149 vs 149)...
+ MatchAlign: score 718.978
+ ExecutiveAlign: 1126 atoms aligned.
+ ExecutiveRMS: 26 atoms rejected during cycle 1 (RMSD=1.16).
+ ExecutiveRMS: 9 atoms rejected during cycle 2 (RMSD=1.03).
+ ExecutiveRMS: 5 atoms rejected during cycle 3 (RMSD=1.02).
+ ExecutiveRMS: 1 atoms rejected during cycle 4 (RMSD=1.01).
+ Executive: RMSD =    1.010 (1085 to 1085 atoms)
