@@ -1,0 +1,284 @@
+Qt not available (pymol.Qt), using GLUT/Tk interface
+ PyMOL(TM) Molecular Graphics System, Version 3.2.0a.
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+    Created by Warren L. DeLano, Ph.D.
+
+    PyMOL is user-supported open-source software.  Although some versions
+    are freely available, PyMOL is not in the public domain.
+
+    If PyMOL is helpful in your work or study, then please volunteer
+    support for our ongoing efforts to create open and affordable scientific
+    software by purchasing a PyMOL Maintenance and/or Support subscription.
+
+    More information can be found at "http://www.pymol.org".
+
+    Enter "help" for a list of commands.
+    Enter "help <command-name>" for information on a specific command.
+
+ Hit ESC anytime to toggle between text and graphics.
+
+Warning: GL_DRAW_BUFFER0=0 -> using GL_BACK
+ Detected OpenGL version 4.6. Shaders available.
+ Detected GLSL version 4.60.
+ OpenGL graphics engine:
+  GL_VENDOR:   Intel
+  GL_RENDERER: Intel(R) Iris(R) Xe Graphics
+  GL_VERSION:  4.6.0 - Build 32.0.101.6737
+ Detected 8 CPU cores.  Enabled multithreaded rendering.
+
+PyMOL>viewport 640,480
+PyMOL>load 3QD6.cif.gz, CD40-CD40L_crystal
+TITLE     Crystal structure of the CD40 and CD154 (CD40L) complex
+ ExecutiveLoad-Detail: Detected mmCIF
+ CmdLoad: "3QD6.cif.gz" loaded as "CD40-CD40L_crystal".
+PyMOL>extract CD40LT, CD40-CD40L_crystal and (chain D or chain E or chain F)
+PyMOL>delete CD40-CD40L_crystal
+PyMOL>load CD40L_ef6d8_unrelaxed_rank_001_alphafold2_multimer_v3_model_2_seed_000.pdb, CD40LT_prediction
+ CmdLoad: "" loaded as "CD40LT_prediction".
+ parser: matching object:
+  CD40LT             CD40LT_prediction
+PyMOL>disable CD40LT_prediction
+PyMOL>load sCD40L_80492_unrelaxed_rank_001_alphafold2_multimer_v3_model_1_seed_000.pdb, sCD40LT_prediction
+ CmdLoad: "" loaded as "sCD40LT_prediction".
+PyMOL>disable sCD40LT_prediction
+PyMOL>load sCD40L_strcbsd_80492_0_unrelaxed_rank_001_alphafold2_multimer_v3_model_2_seed_000.pdb, sCD40LT_structure-based_prediction
+ CmdLoad: "" loaded as "sCD40LT_structure-based_prediction".
+PyMOL>disable sCD40LT_structure-based_prediction
+PyMOL>enable sCD40LT_prediction
+PyMOL># Multimeric alignment with arg -mm 1 for alignment of two multi-chain oligomeric structures
+PyMOL>># and arg -ter 0 for align all chains from all models (recommended for aligning  biological assemblies, i.e. biounits)
+  File "toplevel", line 1
+    ># and arg -ter 0 for align all chains from all models (recommended for aligning  biological assemblies, i.e. biounits)
+    ^
+SyntaxError: invalid syntax
+PyMOL>usalign CD40LT, sCD40LT_prediction, args="-mm 1 -ter 0"
+"C:\Users\Sébastien\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymol\pymol_path\data\startup\USalign\USalign.exe" C:\Users\SBASTI~1\AppData\Local\Temp\mobileqpbg3v8w.pdb C:\Users\SBASTI~1\AppData\Local\Temp\targetd0_183uj.pdb -mm 1 -ter 0 -outfmt -1 -m -
+
+Name of Structure_1: C:\Users\SBASTI~1\AppData\Local\Temp\mobileqpbg3v8w.pdb:1,D:1,E:1,F (to be superimposed onto Structure_2)
+Name of Structure_2: C:\Users\SBASTI~1\AppData\Local\Temp\targetd0_183uj.pdb:1,C:1,A:1,B
+Length of Structure_1: 405 residues
+Length of Structure_2: 447 residues
+
+Aligned length= 405, RMSD=   1.07, Seq_ID=n_identical/n_aligned= 1.000
+TM-score= 0.98446 (normalized by length of Structure_1: L=405, d0=7.26)
+TM-score= 0.89288 (normalized by length of Structure_2: L=447, d0=7.57)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+------NPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCS--------PFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*------NPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCS--------PFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*------NPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCS--------PFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*
+      .:::::::::::::.::::::::::::::::::::::::::::::::::::::::::::::        ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*      .::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*      .::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*
+MQKGDQNPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*MQKGDQNPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*MQKGDQNPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*
+
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0     -29.4886848442  -0.4726536578   0.8643631379   0.1716825138
+1     -42.2629248839  -0.8171659525  -0.3569532795  -0.4525750351
+2      30.8105753013  -0.3299065411  -0.3542043507   0.8750434001
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}
+#Total CPU time is  1.86 seconds
+PyMOL># and arg -ter 0 for align all chains from all models (recommended for aligning  biological assemblies, i.e. biounits)
+ Setting: seq_view set to on.
+ Setting: seq_view set to off.
+PyMOL>ray
+ Ray: render time: 1.44 sec. = 2505.2 frames/hour (1.44 sec. accum.).
+ ScenePNG: wrote 842x656 pixel image to file "C:/Users/Sébastien/alphafold-training/docs/day1/data/Exercise_5/usalign_CD40LT-sCD40LT_prediction-KGYY.png".
+PyMOL>ray
+ Ray: render time: 1.24 sec. = 2903.2 frames/hour (2.68 sec. accum.).
+ ScenePNG: wrote 842x656 pixel image to file "C:/Users/Sébastien/alphafold-training/docs/day1/data/Exercise_5/usalign_CD40LT-sCD40LT_prediction-KGYY.png".
+PyMOL>zoom
+PyMOL>disable sCD40LT_prediction
+PyMOL>enable sCD40LT_structure-based_prediction
+PyMOL>usalign CD40LT, sCD40LT_structure-based_prediction, args="-mm 1 -ter 0"
+"C:\Users\Sébastien\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymol\pymol_path\data\startup\USalign\USalign.exe" C:\Users\SBASTI~1\AppData\Local\Temp\mobile3cf4lt_l.pdb C:\Users\SBASTI~1\AppData\Local\Temp\targetastd2dai.pdb -mm 1 -ter 0 -outfmt -1 -m -
+
+Name of Structure_1: C:\Users\SBASTI~1\AppData\Local\Temp\mobile3cf4lt_l.pdb:1,D:1,E:1,F (to be superimposed onto Structure_2)
+Name of Structure_2: C:\Users\SBASTI~1\AppData\Local\Temp\targetastd2dai.pdb:1,B:1,A:1,C
+Length of Structure_1: 405 residues
+Length of Structure_2: 447 residues
+
+Aligned length= 375, RMSD=   5.34, Seq_ID=n_identical/n_aligned= 0.459
+TM-score= 0.64906 (normalized by length of Structure_1: L=405, d0=7.26)
+TM-score= 0.60062 (normalized by length of Structure_2: L=447, d0=7.57)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+----NPQI-A-AHVISEA-SSKTTSVLQWAEKGYYTMSNNL-VTLENGKQLTVKRQGLYYIYAQVTF---------CSP-FIASLCLKSPGRFERILLRAANTHSSAKPC--G--QQSIHLGGVFELQPGASVFVNVTDPSQVSHGT--GFTSFGLLKL*----NPQI-A-AHVISE--ASSKTTSVLQWAEKGYYTMSNNL-VTLENGKQLTVKRQGLYYIYAQVTF---------CSPFIASLCLKSPGRFERILLRAANTHSSAKPC--G--QQSIHLGGVFELQPGASVFVNVTDPSQVSHGT--GFTSFGLLKL*----NPQI-A-AHVISEA-SSKTTSVLQWAEKGYYTMSNNL-VTLENGKQLTVKRQGLYYIYAQVTF---------CSP-FIASLCLKSPGRFERILLRAANTHSSAKPC--G--QQSIHLGGVFELQPGASVFVNVTDPSQVSHGT--GFTSFGLLKL*
+    :::: : :::::.. ..... .::::... .:::.:: ..::::::::.....::::::....         ::  ..::::::   ::.....::.........   .  ..:.::::::..: ..:::::.  ::...::.  ...:::::::*    :::: : :::::.  :::::.  :::::.. .:::.:: ..::::::::.....:::::::...         ::...:::::.   ::.....:::........   .  ..:.::::::..:  :.::::: .::...::.  ...:::::::*    :::: : :::::.. :.... .::::... .:::.:: ..::::::::.....:::::::...         ::  ..:::::.   ::.....:::........   .  ..:.::::.:..:  :.::::: .::...::.  ...:::::::*
+MQKGDQNPQIAAHVISEASSKTTS-VLQWAEKG-YYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAP-FIASLCLKS---PGRFERILLRAANTHSSA-KPCGQQSIHLGGVFELQP-GASVFVNV--TDPSQVSHGTGFTSFGLLKL*MQKGDQNPQIAAHVISEASSKTTSV--LQWAEKG-YYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKS---PGRFERILLRAANTHSSA-KPCGQQSIHLGGVFELQP--GASVFVN-VTDPSQVSHGTGFTSFGLLKL*MQKGDQNPQIAAHVISEASSKTTS-VLQWAEKG-YYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAP-FIASLCLKS---PGRFERILLRAANTHSSA-KPCGQQSIHLGGVFELQP--GASVFVN-VTDPSQVSHGTGFTSFGLLKL*
+
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0       0.1724309370   0.8658190210  -0.0174828892   0.5000517687
+1       0.5846735025   0.4934746935  -0.1353550634  -0.8591633917
+2      -1.3118011182   0.0827051972   0.9906429000  -0.1085656251
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}
+#Total CPU time is  4.47 seconds
+PyMOL>zoom
+PyMOL>ray
+ Ray: render time: 3.06 sec. = 1175.7 frames/hour (5.74 sec. accum.).
+ ScenePNG: wrote 842x656 pixel image to file "C:/Users/Sébastien/alphafold-training/docs/day1/data/Exercise_5/usalign_CD40LT-sCD40LT_structure-based_prediction.png".
+PyMOL>disable sCD40LT_structure-based_prediction
+ parser: matching files:
+  CD40L_ef6d8.result.zip
+  CD40L_ef6d8_unrelaxed_rank_001_alphafold2_multimer_v3_model_2_seed_000.pdb
+  CD40L_prediction.ipynb
+PyMOL>enable CD40LT_prediction
+ You clicked /CD40LT_prediction//C/PHE`111/CA
+ Selector: selection "sele" defined with 11 atoms.
+ You clicked /CD40LT_prediction//C/SER`110/CA
+ Selector: selection "sele" defined with 17 atoms.
+ You clicked /CD40LT_prediction//B/SER`110/CA
+ Selector: selection "sele" defined with 6 atoms.
+ parser: no matching files.
+ parser: no matching files.
+ parser: no matching files.
+PyMOL>usalign CD40LT, CD40LT_prediction and resi 110-9999, args="-mm 1 -ter 0"
+"C:\Users\Sébastien\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymol\pymol_path\data\startup\USalign\USalign.exe" C:\Users\SBASTI~1\AppData\Local\Temp\mobile4ypg7yz8.pdb C:\Users\SBASTI~1\AppData\Local\Temp\targetlloypheg.pdb -mm 1 -ter 0 -outfmt -1 -m -
+
+Name of Structure_1: C:\Users\SBASTI~1\AppData\Local\Temp\mobile4ypg7yz8.pdb:1,D:1,E:1,F (to be superimposed onto Structure_2)
+Name of Structure_2: C:\Users\SBASTI~1\AppData\Local\Temp\targetlloypheg.pdb:1,C:1,A:1,B
+Length of Structure_1: 405 residues
+Length of Structure_2: 456 residues
+
+Aligned length= 405, RMSD=   1.03, Seq_ID=n_identical/n_aligned= 0.995
+TM-score= 0.98463 (normalized by length of Structure_1: L=405, d0=7.26)
+TM-score= 0.87558 (normalized by length of Structure_2: L=456, d0=7.64)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+-----N----PQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCS--------PFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*---------NPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCS--------PFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*--------N-PQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCS--------PFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*
+     .    :::::::::::::.::::::::::::::::::::::::::::::::::::::::::::::        ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*         .::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*        . ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*
+SFEMQKGDQNPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*SFEMQKGDQNPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*SFEMQKGDQNPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*
+
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0       1.3697109879  -0.5659587761  -0.6949682011  -0.4435198566
+1      -7.1626572588   0.3612323425  -0.6926172777   0.6243336459
+2      -3.9271912356  -0.7410815464   0.1931333894   0.6430378180
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}
+#Total CPU time is  2.45 seconds
+PyMOL>ray
+ Ray: render time: 5.12 sec. = 703.4 frames/hour (10.86 sec. accum.).
+ ScenePNG: wrote 842x656 pixel image to file "C:/Users/Sébastien/alphafold-training/docs/day1/data/Exercise_5/usalign_CD40LT-CD40LT_prediction.png".
+PyMOL>select KGLL, pepseq KGLL
+ Selector: selection "KGLL" defined with 0 atoms.
+ parser: no matching representation.
+ parser: matching representation:
+  slice    spheres  sticks   surface
+PyMOL>show sticks, KGLL
+PyMOL>select KGYY, pepseq KGYY
+ Selector: selection "KGYY" defined with 444 atoms.
+PyMOL>show sticks, KGYY
+PyMOL>show sticks, pepseq KGYY
+ You clicked /CD40LT/N/D/NAG`1411/C3
+ Selector: selection "sele" defined with 14 atoms.
+PyMOL>select NAG
+ Error: Invalid selection name "NAG".
+NAG<--
+ parser: no matching files.
+ parser: no matching files.
+ parser: no matching files.
+ parser: no matching files.
+PyMOL>zoom KGYY
+PyMOL>enable KGYY
+ parser: no matching object.
+PyMOL>enable all
+PyMOL>ray
+ Ray: render time: 4.14 sec. = 869.6 frames/hour (15.00 sec. accum.).
+ ScenePNG: wrote 842x656 pixel image to file "C:/Users/Sébastien/alphafold-training/docs/day1/data/Exercise_5/usalign_CD40LT-CD40LT_prediction_KGYY.png".
+ parser: no matching files.
+PyMOL>usalign CD40LT, sCD40LT_structure-based_prediction, args="-mm 1 -ter 0"
+"C:\Users\Sébastien\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymol\pymol_path\data\startup\USalign\USalign.exe" C:\Users\SBASTI~1\AppData\Local\Temp\mobilel8qjsc82.pdb C:\Users\SBASTI~1\AppData\Local\Temp\target_oe43gav.pdb -mm 1 -ter 0 -outfmt -1 -m -
+
+Name of Structure_1: C:\Users\SBASTI~1\AppData\Local\Temp\mobilel8qjsc82.pdb:1,D:1,E:1,F (to be superimposed onto Structure_2)
+Name of Structure_2: C:\Users\SBASTI~1\AppData\Local\Temp\target_oe43gav.pdb:1,B:1,A:1,C
+Length of Structure_1: 405 residues
+Length of Structure_2: 447 residues
+
+Aligned length= 375, RMSD=   5.34, Seq_ID=n_identical/n_aligned= 0.459
+TM-score= 0.64906 (normalized by length of Structure_1: L=405, d0=7.26)
+TM-score= 0.60062 (normalized by length of Structure_2: L=447, d0=7.57)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+----NPQI-A-AHVISEA-SSKTTSVLQWAEKGYYTMSNNL-VTLENGKQLTVKRQGLYYIYAQVTF---------CSP-FIASLCLKSPGRFERILLRAANTHSSAKPC--G--QQSIHLGGVFELQPGASVFVNVTDPSQVSHGT--GFTSFGLLKL*----NPQI-A-AHVISE--ASSKTTSVLQWAEKGYYTMSNNL-VTLENGKQLTVKRQGLYYIYAQVTF---------CSPFIASLCLKSPGRFERILLRAANTHSSAKPC--G--QQSIHLGGVFELQPGASVFVNVTDPSQVSHGT--GFTSFGLLKL*----NPQI-A-AHVISEA-SSKTTSVLQWAEKGYYTMSNNL-VTLENGKQLTVKRQGLYYIYAQVTF---------CSP-FIASLCLKSPGRFERILLRAANTHSSAKPC--G--QQSIHLGGVFELQPGASVFVNVTDPSQVSHGT--GFTSFGLLKL*
+    :::: : :::::.. ..... .::::... .:::.:: ..::::::::.....::::::....         ::  ..::::::   ::.....::.........   .  ..:.::::::..: ..:::::.  ::...::.  ...:::::::*    :::: : :::::.  :::::.  :::::.. .:::.:: ..::::::::.....:::::::...         ::...:::::.   ::.....:::........   .  ..:.::::::..:  :.::::: .::...::.  ...:::::::*    :::: : :::::.. :.... .::::... .:::.:: ..::::::::.....:::::::...         ::  ..:::::.   ::.....:::........   .  ..:.::::.:..:  :.::::: .::...::.  ...:::::::*
+MQKGDQNPQIAAHVISEASSKTTS-VLQWAEKG-YYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAP-FIASLCLKS---PGRFERILLRAANTHSSA-KPCGQQSIHLGGVFELQP-GASVFVNV--TDPSQVSHGTGFTSFGLLKL*MQKGDQNPQIAAHVISEASSKTTSV--LQWAEKG-YYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKS---PGRFERILLRAANTHSSA-KPCGQQSIHLGGVFELQP--GASVFVN-VTDPSQVSHGTGFTSFGLLKL*MQKGDQNPQIAAHVISEASSKTTS-VLQWAEKG-YYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAP-FIASLCLKS---PGRFERILLRAANTHSSA-KPCGQQSIHLGGVFELQP--GASVFVN-VTDPSQVSHGTGFTSFGLLKL*
+
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0       0.4522302813  -0.5659582963   0.3612361382  -0.7410800627
+1      -3.2505841854  -0.6949701555  -0.6926156918   0.1931320442
+2       7.6047449234  -0.4435174065   0.6243332091   0.6430399320
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}
+#Total CPU time is  3.82 seconds
+PyMOL>clip atoms, 5, all
+PyMOL>ray
+ Ray: render time: 3.00 sec. = 1199.2 frames/hour (18.00 sec. accum.).
+ ScenePNG: wrote 842x656 pixel image to file "C:/Users/Sébastien/alphafold-training/docs/day1/data/Exercise_5/usalign_CD40LT-sCD40LT_structure-based_prediction_KGYY.png".
+PyMOL>usalign CD40LT, sCD40LT_prediction, args="-mm 1 -ter 0"
+"C:\Users\Sébastien\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymol\pymol_path\data\startup\USalign\USalign.exe" C:\Users\SBASTI~1\AppData\Local\Temp\mobilegqn5c1_f.pdb C:\Users\SBASTI~1\AppData\Local\Temp\targetmje_vwuf.pdb -mm 1 -ter 0 -outfmt -1 -m -
+
+Name of Structure_1: C:\Users\SBASTI~1\AppData\Local\Temp\mobilegqn5c1_f.pdb:1,D:1,E:1,F (to be superimposed onto Structure_2)
+Name of Structure_2: C:\Users\SBASTI~1\AppData\Local\Temp\targetmje_vwuf.pdb:1,C:1,A:1,B
+Length of Structure_1: 405 residues
+Length of Structure_2: 447 residues
+
+Aligned length= 405, RMSD=   1.07, Seq_ID=n_identical/n_aligned= 1.000
+TM-score= 0.98446 (normalized by length of Structure_1: L=405, d0=7.26)
+TM-score= 0.89288 (normalized by length of Structure_2: L=447, d0=7.57)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+------NPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCS--------PFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*------NPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCS--------PFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*------NPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCS--------PFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*
+      .:::::::::::::.::::::::::::::::::::::::::::::::::::::::::::::        ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*      .::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*      .::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*
+MQKGDQNPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*MQKGDQNPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*MQKGDQNPQIAAHVISEASSKTTSVLQWAEKGYYTMSNNLVTLENGKQLTVKRQGLYYIYAQVTFCSNREASSQAPFIASLCLKSPGRFERILLRAANTHSSAKPCGQQSIHLGGVFELQPGASVFVNVTDPSQVSHGTGFTSFGLLKL*
+
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0      -0.3293162810   0.8658179324   0.4934770487   0.0827025408
+1       1.3816396166  -0.0174806434  -0.1353531147   0.9906432059
+2       0.2737013461   0.5000537321  -0.8591623460  -0.1085648576
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}
+#Total CPU time is  1.85 seconds
+PyMOL>ray
+ Ray: render time: 1.78 sec. = 2019.1 frames/hour (19.78 sec. accum.).
+ ScenePNG: wrote 842x656 pixel image to file "C:/Users/Sébastien/alphafold-training/docs/day1/data/Exercise_5/usalign_CD40LT-sCD40LT_prediction-KGYY.png".
+ PyMOL: normal program termination.
