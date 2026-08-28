@@ -1,0 +1,8 @@
+The AlphaFold 3 web server restricts small molecules to existing Chemical Component Dictionary (CCD) codes to limit computational abuse and simplify the UI, but the underlying AF3 algorithm actually processes SMILES strings natively.
+
+If your goal is to predict how this custom chemical interacts with a protein, here are the most effective alternatives:
+
+* **Run AlphaFold 3 Locally:** DeepMind open-sourced the AF3 code. If you run it locally or on a cloud GPU (rather than through their web server), the input is handled via a JSON file. In this local JSON configuration, you can define custom ligands directly using their SMILES strings, completely bypassing the CCD limitation.
+* **RoseTTAFold All-Atom (RFAA):** This is AF3’s closest direct competitor for generalized biomolecular modeling. It was explicitly designed to predict protein-small molecule complexes and natively accepts SMILES strings for custom ligands in its standard workflow.
+* **DiffDock (Generative Docking):** If you already have the structure of your protein (e.g., predicted via AF2 or your custom templates), you can use DiffDock. It is a highly accurate diffusion model that takes a protein PDB file and a ligand SMILES string to blindly predict where and how the chemical binds.
+* **Avogadro or Open Babel (Ligand Only):** If you do not care about the protein and just want to fold the SMILES string into a 3D chemical structure (`.sdf` or `.mol2`), using a folding neural network is overkill. You can paste the SMILES into a free cheminformatics software like Avogadro and run a quick energy minimization to get the 3D conformer instantly.
