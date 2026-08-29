@@ -4,6 +4,16 @@ This two-day, hands-on course introduces protein structure prediction with Alpha
 
 **Course website:** [https://dirapota.github.io/alphafold-training/](https://dirapota.github.io/alphafold-training/)
 
+## About this Fork: PyMOL Integration & Advanced Ligand Alignment
+
+While the original course utilizes web-based tools like Mol* for visualization, this fork extends the exercises by transferring the structural analysis workflows into a local **PyMOL** environment. Specific additions and workflows documented in this repository include:
+
+* **Advanced Local Alignment:** Workflows utilizing the US-align PyMOL plugin for domain-specific structural superimpositions (e.g., isolating soluble domains) and accurate TM-score calculations.
+* **Custom Ligand Mapping:** Step-by-step methods for structurally aligning custom multi-armed chemical ligands to specific multimeric protein residues. This includes using PyMOL's `pair_fit` command with explicit atom-pairing to map SMILES-generated ligands onto complex structures like the sCD40LT trimer.
+* **Pipeline Customization:** Techniques for managing local custom templates, correctly fetching biological assemblies, and extracting FASTA sequence fragments directly from structural models for downstream AI prediction pipelines.
+
+This fork serves as a practical bridge for researchers looking to combine state-of-the-art AI predictions with the scriptable, high-control environment of traditional local molecular viewers.
+
 ## Authors
 
 - Diana Rapota [![ORCID](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0009-0004-0894-9816)
