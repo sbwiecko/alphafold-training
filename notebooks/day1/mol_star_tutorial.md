@@ -5,12 +5,12 @@
 
 ## General Interface
 
-![Mol* Interface](../assets/images/general_interface.png)
+![Mol* Interface](../../assets/img/general_interface.png)
 
 ### Navigate the 3D Canvas
 
 
-![Mol* Interface](../assets/images/p1.png)
+![Mol* Interface](../../assets/img/p1.png)
 
 | Action | How to |
 |--------|--------|
@@ -25,7 +25,7 @@
 ## Toggle Menu
 
 <div style="text-align: center; margin-bottom: 1rem;">
-  <img src="../assets/images/p2.png" alt="Mol* Interface" style="width: 80%;">
+  <img src="../../assets/img/p2.png" alt="Mol* Interface" style="width: 80%;">
 </div>
 
 Mol\* has two modes that change the behavior of a click. Switch between them using the **Selection Mode icon** (shaped like a cursor) in the Toggle Menu.
@@ -83,7 +83,7 @@ Go to the Home main menu. Options include:
 - **Download from PDB** — paste a PDB ID
 - **Open Files** — upload from your laptop
 
-![Mol* Interface](../assets/images/p4.png){ width="85%" }
+![Mol* Interface](../../assets/img/p4.png){ width="85%" }
 
 ---
 
@@ -120,7 +120,7 @@ set ray_trace_mode, 3
 ray
 ```
 
-![Superposition of the two structures](./myo_hemo_globin.png)
+![Superposition of the two structures](../../assets/img/myo_hemo_globin.png)
 
 ## Exercise 2
 
@@ -164,7 +164,7 @@ set direct, 0.3
 ray
 ```
 
-![Superposition of the PIGU domain prediction to the crystal domain structure](.\PIGU_7W72.png)
+![Superposition of the PIGU domain prediction to the crystal domain structure](../../assets/img/PIGU_7W72.png)
 
 ---
 
@@ -233,7 +233,7 @@ for(i=0; i<L; i++)
 #Total CPU time is  0.18 seconds
 ```
 
-![Superposition of the PIGU domain prediction to the crystal domain structure using US-align](.\PIGU_7W72_USalign.png)
+![Superposition of the PIGU domain prediction to the crystal domain structure using US-align](../../assets/img/PIGU_7W72_USalign.png)
 
 Both algorithms successfully aligned the structures, but they report the quality of that fit based on their distinct philosophies.
 

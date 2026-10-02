@@ -12,23 +12,23 @@ Upon Ca²⁺ binding, calmodulin undergoes conformational rearrangements. In thi
 
 1. First, model calmodulin in the **apo conformation**. Go to [AlphaFold Server](https://alphafoldserver.com/), select **Protein** as the Entity type, keep **Copies** as 1 (monomer) and insert the calmodulin sequence into the sequence field. Press **Continue** and preview the job.
 
-    ![AlphaFold Server - input sequence](../assets/images/Picture25.png)
+    ![AlphaFold Server - input sequence](../../assets/img/Picture25.png)
 
 2. In the window, rename the Job name as "calmodulin" and press **Confirm and submit job**.
 
-    ![AlphaFold Server - submit job](../assets/images/Picture23.png)
+    ![AlphaFold Server - submit job](../../assets/img/Picture23.png)
 
 3. Model calmodulin in complex with **4 Ca²⁺ ions**. Press **+ Add entity** → Entity type **"Ion"** → Copies set to **4** and in the window select **Ca²⁺**.
 
-    ![AlphaFold Server - add Ca2+ ions](../assets/images/Picture22.png)
+    ![AlphaFold Server - add Ca2+ ions](../../assets/img/Picture22.png)
 
 4. Click on the jobs and evaluate the results.
 
-    ![AlphaFold Server - results](../assets/images/Picture26.png)
+    ![AlphaFold Server - results](../../assets/img/Picture26.png)
 
 5. Download the models.
 
-    ![AlphaFold Server - download](../assets/images/Picture24.png)
+    ![AlphaFold Server - download](../../assets/img/Picture24.png)
 
 6. Now compare the apo and Ca²⁺-bound conformations in Mol\*. Upload the best model for each run and superpose them with TM-align. Do you see any differences?
 
@@ -60,27 +60,27 @@ We will use **Boltz-2** via [Neurosnap](https://neurosnap.ai/). Using it require
 
 1. Open [Neurosnap](https://neurosnap.ai/) and make an account. You will get a confirmation email (also check your spam folder). Once activated, find **Boltz-2** on the service (or open it [directly](https://neurosnap.ai/service/Boltz-2%20(AlphaFold3))). Give the job a name in the **Job Note** section.
 
-    ![Neurosnap - job name](../assets/images/1_jobname.png)
+    ![Neurosnap - job name](../../assets/img/1_jobname.png)
 
 2. Get the protein sequence from the FASTA file, open the **Input Sequences** section and paste the protein sequence. Make sure the sequence is added before closing the window.
 
-    ![Input sequence - step 1](../assets/images/2_input_seq1.png)
+    ![Input sequence - step 1](../../assets/img/2_input_seq1.png)
 
-    ![Input sequence - step 2](../assets/images/2_input_seq2.png)
+    ![Input sequence - step 2](../../assets/img/2_input_seq2.png)
 
-    ![Input sequence - step 3](../assets/images/2_input_seq3.png)
+    ![Input sequence - step 3](../../assets/img/2_input_seq3.png)
 
 3. Copy the SMILES string of the ligand. Open the **Input Molecules** section, click on **Enter SMILES or CCD codes** and paste the SMILES string. Make sure the molecule is added before closing the window.
 
-    ![Input ligand - step 1](../assets/images/3_input_lig1.png)
+    ![Input ligand - step 1](../../assets/img/3_input_lig1.png)
 
-    ![Input ligand - step 2](../assets/images/3_input_lig2.png)
+    ![Input ligand - step 2](../../assets/img/3_input_lig2.png)
 
-    ![Input ligand - step 3](../assets/images/3_input_lig3.png)
+    ![Input ligand - step 3](../../assets/img/3_input_lig3.png)
 
 4. Click **Run Job** at the bottom of the page.
 
-    ![Run job](../assets/images/4_run.png)
+    ![Run job](../../assets/img/4_run.png)
 
 ---
 
@@ -99,3 +99,4 @@ In this exercise, you can model a protein or protein complex of your own choice 
     - Use [SWISS-MODEL Repository](https://swissmodel.expasy.org/repository) for a sequence search for templates in PDB
     - Or/And generate a prediction for one or more chains and use it as a template (if prediction is confident) for a structural search using [Foldseek](https://search.foldseek.com/)
     - After gaining some information, proceed to the AlphaFold Server submission above
+
